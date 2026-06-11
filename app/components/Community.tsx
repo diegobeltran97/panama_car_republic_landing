@@ -1,66 +1,77 @@
-const stats = [
-  { value: "71", label: "Publicaciones del año", suffix: "" },
-  { value: "7,453", label: "Miembros en la comunidad", suffix: "+" },
-  { value: "98%", label: "Satisfacción de usuarios", suffix: "" },
-  { value: "24/7", label: "Soporte disponible", suffix: "" },
-];
+function YouTubeIcon() {
+  return (
+    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+    </svg>
+  );
+}
+
+function InstagramIcon() {
+  return (
+    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+    </svg>
+  );
+}
+
+function TikTokIcon() {
+  return (
+    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" />
+    </svg>
+  );
+}
 
 export default function Community() {
   return (
-    <section id="community" className="bg-[#f7f4ef] py-24">
+    <section id="community" className="bg-white py-24">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <div className="inline-block bg-[#1a1a2e]/10 text-[#1a1a2e] text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-4">
-            Juntos somos más
+        <div className="flex flex-col lg:flex-row items-start justify-between gap-12">
+          <div className="flex-1">
+            <p className="text-sm font-semibold text-[#231F20]/50 uppercase tracking-widest mb-3">
+              Pasión
+            </p>
+            <h2 className="text-4xl md:text-5xl font-black text-[#231F20] leading-tight mb-4">
+              Ya somos una comunidad
+            </h2>
+            <p className="text-[#231F20]/60 text-lg max-w-lg leading-relaxed">
+              Únete a la comunidad automotriz más activa de Panamá.
+            </p>
           </div>
-          <h2 className="text-4xl md:text-5xl font-black text-[#1a1a2e] leading-tight">
-            Ya somos una{" "}
-            <span className="text-[#6b4fbb]">comunidad</span>
-          </h2>
-          <p className="mt-4 text-[#1a1a2e]/60 text-lg max-w-xl mx-auto">
-            Miles de panameños ya esperan el lanzamiento. Únete antes de que abra al público.
-          </p>
+
+          {/* Social icons */}
+          <div className="flex items-center gap-4 lg:self-start lg:mt-2">
+            <a href="#" aria-label="YouTube" className="text-[#231F20]/60 hover:text-[#231F20] transition-colors">
+              <YouTubeIcon />
+            </a>
+            <a href="#" aria-label="Instagram" className="text-[#231F20]/60 hover:text-[#231F20] transition-colors">
+              <InstagramIcon />
+            </a>
+            <a href="#" aria-label="TikTok" className="text-[#231F20]/60 hover:text-[#231F20] transition-colors">
+              <TikTokIcon />
+            </a>
+          </div>
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {stats.map((s, i) => (
-            <div key={i} className="text-center">
-              <div className="text-5xl md:text-6xl font-black text-[#1a1a2e]">
-                {s.value}
-                <span className="text-[#F5C800]">{s.suffix}</span>
-              </div>
-              <div className="mt-2 text-[#1a1a2e]/60 font-medium">{s.label}</div>
+        {/* Stats */}
+        <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 gap-0 border border-[#231F20]/10 rounded-2xl overflow-hidden">
+          <div className="p-10 border-b sm:border-b-0 sm:border-r border-[#231F20]/10">
+            <div
+              className="text-6xl md:text-7xl font-black text-[#231F20] leading-none"
+              style={{ fontFamily: "var(--font-barlow-condensed)" }}
+            >
+              71
             </div>
-          ))}
-        </div>
-
-        {/* Social proof avatars */}
-        <div className="flex flex-col items-center gap-6">
-          <div className="flex -space-x-3">
-            {["#e74c3c", "#3498db", "#2ecc71", "#f39c12", "#9b59b6", "#1abc9c", "#e67e22", "#e91e63"].map(
-              (color, i) => (
-                <div
-                  key={i}
-                  className="w-12 h-12 rounded-full border-2 border-white flex items-center justify-center text-white font-bold text-sm shadow-md"
-                  style={{ backgroundColor: color }}
-                >
-                  {String.fromCharCode(65 + i)}
-                </div>
-              )
-            )}
-            <div className="w-12 h-12 rounded-full border-2 border-white bg-[#1a1a2e] flex items-center justify-center text-white font-bold text-xs shadow-md">
-              +7k
-            </div>
+            <p className="mt-2 text-[#231F20]/60 font-medium">Personas en la lista de espera</p>
           </div>
-          <p className="text-[#1a1a2e]/60 font-medium">
-            Más de 7,000 panameños ya en lista de espera
-          </p>
-          <div className="flex gap-1">
-            {[1, 2, 3, 4, 5].map((s) => (
-              <svg key={s} className="w-5 h-5 text-[#F5C800]" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-              </svg>
-            ))}
+          <div className="p-10">
+            <div
+              className="text-6xl md:text-7xl font-black text-[#231F20] leading-none"
+              style={{ fontFamily: "var(--font-barlow-condensed)" }}
+            >
+              7,453
+            </div>
+            <p className="mt-2 text-[#231F20]/60 font-medium">Seguidores en redes sociales</p>
           </div>
         </div>
       </div>

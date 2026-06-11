@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist } from "next/font/google";
+import { Barlow_Condensed } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -7,15 +8,17 @@ const geistSans = Geist({
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const barlowCondensed = Barlow_Condensed({
+  variable: "--font-barlow-condensed",
   subsets: ["latin"],
+  weight: ["400", "600", "700", "800", "900"],
+  style: ["normal", "italic"],
 });
 
 export const metadata: Metadata = {
-  title: "Panama Car Republic — El mercado de autos hecho para Panamá",
+  title: "Panama Car Republic — El marketplace automotriz de Panamá",
   description:
-    "Compra, vende y arranca. El primer marketplace de automóviles diseñado para los panameños. Únete a más de 7,000 miembros en lista de espera.",
+    "Compra, vende y arranca. El marketplace automotriz más completo y seguro de Panamá. Únete a la lista de espera.",
 };
 
 export default function RootLayout({
@@ -26,7 +29,7 @@ export default function RootLayout({
   return (
     <html
       lang="es"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${barlowCondensed.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
