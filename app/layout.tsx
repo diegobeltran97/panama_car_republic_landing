@@ -1,11 +1,17 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
-import { Barlow_Condensed } from "next/font/google";
+import { Barlow_Condensed, Archivo_Black } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+});
+
+const archivoBlack = Archivo_Black({
+  variable: "--font-archivo",
+  subsets: ["latin"],
+  weight: "400",
 });
 
 const barlowCondensed = Barlow_Condensed({
@@ -29,7 +35,7 @@ export default function RootLayout({
   return (
     <html
       lang="es"
-      className={`${geistSans.variable} ${barlowCondensed.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${barlowCondensed.variable} ${archivoBlack.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
